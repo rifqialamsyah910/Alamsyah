@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS Alamsyah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-page" class="active">
+        <h1>Login LMS Alamsyah</h1>
+        <form id="login-form">
+            <label for="alamsyah910">Username:</label>
+            <input type="text" id="alamsyah910" name="alamsyah910" placeholder="Masukkan username" required>
+            
+            <label for="password123">Password:</label>
+            <input type="password123" id="password123" name="password123" placeholder="Masukkan password" required>
+            
+            <a href="https://lms.unindra.ac.id/member" style="text-decoration: none;">
+                <button type="button">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </a>
+
+        </form>
+        <p id="login-error" class="error-message"></p>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the values from the input fields
+            const username = document.getElementById('alamsyah910').value;
+            const password = document.getElementById('password123').value;
+
+            // Predefined credentials (for demonstration purposes)
+            const validUsername = 'alamsyah910';
+            const validPassword = 'password123'; // Replace with actual password
+
+            // Validate the credentials
+            if (username === validUsername && password === validPassword) {
+                // Successful login
+                document.getElementById('login-error').textContent = '';
+                alert('Login successful!'); // Redirect to another page or perform further actions
+                // For example, redirect to a dashboard
+                // window.location.href = 'dashboard.html';
+            } else {
+                // Invalid login
+                document.getElementById('login-error').textContent = 'Invalid username or password.';
+            }
+        }
+    </script>
+
+    <div id="lms-app">
+        <header>
+            <h1><i class="fas fa-graduation-cap"></i> LMS Kampus</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="dashboard-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="#" id="courses-link"><i class="fas fa-book"></i> Mata Kuliah</a></li>
+                    <li><a href="#" id="assignments-link"><i class="fas fa-tasks"></i> Tugas</a></li>
+                    <li><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        
+        <main>
+            <section id="dashboard">
+                <h2><a href="https://lms.unindra.ac.id/member">Dashboard</a></h2>
+                <p>Selamat datang di LMS Alamsyah</p>
+            </section>
+            <section id="courses">
+                <h2>Mata Kuliah</h2>
+                <ul>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDSWk0R24yNms5bUs3ZmtTN0pqOWpuRT0=">Pemrograman</a></li>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDR2FxL1FMTjROSUZaLytBb1VWbXVSVT0=">Algoritma</a></li>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDTEtPcVV3a1JkT1ZDQUdxZmtVYjJMQT0=">Bahasa Indonesia</a></li>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDRXRyZkVmWTBscWJkWUtFclpTSzZ3ND0=">Bahasa Inggris</a></li>
+                    <li><a href="hhttps://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDQklFUFgyTGVneGxHNW1kQjMyNlJFUT0=">Matematika</a></li>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDS0sxL3picHZncEpKdUhxOEVIdVNmZz0=">Konsep Sistem Informasi</a></li>
+                    <li><a href="hhttps://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDUERzWGlseTc4eitOY2g5ak1FN2E0WT0=">Agama</a></li>
+                    <li><a href="https://lms.unindra.ac.id/pertemuan/plist/elBtOGtkNlB5a295MTFYUm9aSDBDTTMvby9NWDdkV3BOT1JBcitTbnpwbz0=">Pancasila</a></li>
+                </ul>
+            </section>
+            <section id="assignments">
+                <h2>Tugas</h2>
+                <ul>
+                    <li>Tugas 1: Studi Kasus Algoritma</li>
+                    <li>Tugas 2: Desain ERD Basis Data</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 LMS Alamsyah</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
